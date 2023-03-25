@@ -1,0 +1,18 @@
+2023/03/24-19:36:04.476 21d0 Reusing MANIFEST /home/matheus/Desktop/Projects/Crons/tokens/session-name/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/03/24-19:36:04.477 21d0 Recovering log #243
+2023/03/24-19:36:04.618 21d0 Reusing old log /home/matheus/Desktop/Projects/Crons/tokens/session-name/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000243.log 
+2023/03/24-19:36:05.666 21d8 Level-0 table #256: started
+2023/03/24-19:36:05.718 21d8 Level-0 table #256: 1085564 bytes OK
+2023/03/24-19:36:05.720 21d8 Delete type=0 #243
+2023/03/24-19:36:16.522 2205 Compacting 1@1 + 9@2 files
+2023/03/24-19:36:16.659 2205 Generated table #257@1: 30912 keys, 2209947 bytes
+2023/03/24-19:36:16.695 2205 Generated table #258@1: 2096 keys, 2142957 bytes
+2023/03/24-19:36:16.757 2205 Generated table #259@1: 3129 keys, 2158015 bytes
+2023/03/24-19:36:16.936 2205 Generated table #260@1: 14709 keys, 2188624 bytes
+2023/03/24-19:36:17.028 2205 Generated table #261@1: 26703 keys, 2280537 bytes
+2023/03/24-19:36:17.089 2205 Generated table #262@1: 15551 keys, 2162263 bytes
+2023/03/24-19:36:17.277 2205 Generated table #263@1: 77980 keys, 2220952 bytes
+2023/03/24-19:36:17.660 2205 Generated table #264@1: 106382 keys, 2259026 bytes
+2023/03/24-19:36:17.827 2205 Generated table #265@1: 99836 keys, 2120353 bytes
+2023/03/24-19:36:17.827 2205 Compacted 1@1 + 9@2 files => 19742674 bytes
+2023/03/24-19:36:17.828 2205 compacted to: files[ 0 0 9 0 0 0 0 ]
