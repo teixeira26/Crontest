@@ -1,14 +1,12 @@
-import * as process from "process";
-
 const venom = require('venom-bot');
 const fs = require('fs');
 const express = require('express');
 var cors = require('cors')
 const app = express();
-const port = process.env.PORT || 4000;
+const port = 3001;
 
 var corsOptions = {
-  origin: process.env.ORIGIN || 'http://localhost:3000',
+  origin: 'http://localhost:3000',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
