@@ -1,25 +1,38 @@
-const venom = require('venom-bot');
 const fs = require('fs');
 const express = require('express');
 var cors = require('cors')
 const app = express();
 const port = 3001;
 
+
+  const qrcode = require('qrcode-terminal');
+
+const { Client } = require('whatsapp-web.js');
+
+
 var corsOptions = {
   origin: 'http://localhost:3000',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
-let qr;
 
 app.get('/', cors(corsOptions), (req, res) => {
-    createVenomInstance();
-      setTimeout(()=>{
-          console.log('waiting')
-           res.send({qr});
-      }, 20000)
 
+    const client = new Client();
 
+    client.on('qr', qr => {
+        qrcode.generate(qr, {small: true});
+    });
+
+    client.on('ready', () => {
+        console.log('Client is ready!');
+    });
+
+    client.initialize();
+
+    client.on('message', message => {
+	console.log(message.body);
+});
 })
 
 app.listen(port, () => {
@@ -28,36 +41,3 @@ app.listen(port, () => {
 
 
 
-const createVenomInstance = ()=>{
-    venom
-     .create(
-        'sessionName',
-        (base64Qr, asciiQR, attempts, urlCode) => {
-          console.log(asciiQR); // Optional to log the QR in the terminal
-            qr = base64Qr;
-        },
-        undefined,
-        { logQR: false }
-      )
-        .then((client) => {
-            start(client);
-        })
-        .catch((erro) => {
-            console.log(erro);
-        });
-}
-
-function start(client) {
-  client.onMessage((message) => {
-      console.log(message)
-
-      client
-        .sendText('5491151168838@c.us', 'Welcome Venom 🕷')
-        .then((result) => {
-          console.log('Result: ', result); //return object success
-        })
-        .catch((erro) => {
-          console.error('Error when sending: ', erro); //return object error
-        });
-  });
-}
