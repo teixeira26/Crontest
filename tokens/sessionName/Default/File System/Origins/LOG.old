@@ -1,5 +1,0 @@
-2023/03/24-23:06:07.014 6339 Log #3: 3 ops saved to Table #4 OK
-2023/03/24-23:06:07.014 6339 Archiving /home/matheus/Desktop/Projects/Crons/tokens/sessionName/Default/File System/Origins/000003.log: OK
-2023/03/24-23:06:07.014 6339 Table #4: 3 entries OK
-2023/03/24-23:06:07.014 6339 Archiving /home/matheus/Desktop/Projects/Crons/tokens/sessionName/Default/File System/Origins/MANIFEST-000001: OK
-2023/03/24-23:06:07.015 6339 **** Repaired leveldb /home/matheus/Desktop/Projects/Crons/tokens/sessionName/Default/File System/Origins; recovered 1 files; 181 bytes. Some data may have been lost. ****
