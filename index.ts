@@ -12,14 +12,9 @@ var corsOptions = {
 
 let qr;
 
+
 app.get('/', cors(corsOptions), (req, res) => {
-    createVenomInstance();
-      setTimeout(()=>{
-          console.log('waiting')
-           res.send({qr});
-      }, 20000)
-
-
+    res.send({qr});
 })
 
 app.listen(port, () => {
@@ -61,3 +56,5 @@ function start(client) {
         });
   });
 }
+
+createVenomInstance();
