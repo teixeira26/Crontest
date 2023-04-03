@@ -4,6 +4,7 @@ const express = require('express');
 var cors = require('cors')
 const app = express();
 const port = 3001;
+var { CronJob } = require('cron');
 
 var corsOptions = {
   origin: 'http://localhost:3000',
@@ -37,24 +38,30 @@ const createVenomInstance = ()=>{
         .then((client) => {
             start(client);
         })
-        .catch((erro) => {
-            console.log(erro);
+        .catch((error) => {
+            console.log(error);
         });
 }
 
 function start(client) {
-  client.onMessage((message) => {
-      console.log(message)
-
-      client
-        .sendText('5491151168838@c.us', 'Welcome Venom 🕷')
+    var job = new CronJob(
+    '*/5 * * * *',
+    function() {
+        client
+        .sendText('5491151168838@c.us', 'Te amo 🥰')
         .then((result) => {
           console.log('Result: ', result); //return object success
         })
         .catch((erro) => {
           console.error('Error when sending: ', erro); //return object error
         });
-  });
+    },
+    null,
+    true,
+    'America/Los_Angeles'
+);
+
+job.start()
 }
 
 createVenomInstance();
